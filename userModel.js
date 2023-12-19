@@ -9,9 +9,14 @@ const user=new schema({
     password:{
         type:String,
         requried:true,
+    },
+   mobileno:{
+    type:String,
+    requried:true,
+
     }
 },{
   timestamps:true  
 }
 );
-model.export=mongoose.Model("users" ,user)
+ module.exports=mongoose.model("users" ,user)

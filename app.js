@@ -1,6 +1,7 @@
 const express=require('express');
 const mongoose=require('mongoose');
 const adminRoute = require('./adminRoute')
+const userRoute=require('./userRoute')
 const cors=require('cors');
 const dotenv=require('dotenv');
 dotenv.config();
@@ -19,4 +20,5 @@ mongoose
     console.log("db not connected")
 });
 app.use('/admin',adminRoute)
+app.use('/user',userRoute)
 
